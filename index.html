@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - PixelDOC Studio Pro</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card: #111827;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-focus: rgba(99, 102, 241, 0.6);
+      --accent: #6366f1;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-system);
+      line-height: 1.6;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    .privacy-card {
+      max-width: 800px;
+      width: 100%;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+    }
+    .privacy-top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .btn-icon-theme {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 7px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .btn-icon-theme:hover {
+      color: var(--text);
+      border-color: var(--border-focus);
+    }
+    h1 { font-size: 24px; font-weight: 800; }
+    h2 { font-size: 16px; font-weight: 700; color: #cbd5e1; margin-top: 10px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+    p, li { font-size: 13.5px; color: var(--muted); }
+    ul { padding-left: 20px; display: flex; flex-direction: column; gap: 7px; }
+    strong { color: #f1f5f9; }
+    .highlight-box {
+      background: rgba(99, 102, 241, 0.08);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      padding: 16px;
+      border-radius: 9px;
+      font-size: 13.5px;
+      color: #c7d2fe;
+      line-height: 1.5;
+    }
+    .table-permissions {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+    .table-permissions th, .table-permissions td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      text-align: left;
+    }
+    .table-permissions th {
+      background: rgba(255, 255, 255, 0.04);
+      color: #f1f5f9;
+      font-weight: 700;
+    }
+    .footer-note {
+      font-size: 12px;
+      color: #64748b;
+      margin-top: 18px;
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 14px;
+    }
+    .footer-links a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Light Theme Overrides */
+    body.light-theme {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: rgba(15, 23, 42, 0.1);
+      --border-focus: rgba(99, 102, 241, 0.6);
+      --text: #0f172a;
+      --muted: #475569;
+    }
+    body.light-theme .privacy-card {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    }
+    body.light-theme .btn-icon-theme {
+      background: #f8fafc;
+      border-color: rgba(15, 23, 42, 0.14);
+      color: #475569;
+    }
+    body.light-theme .btn-icon-theme:hover {
+      color: #0f172a;
+      border-color: var(--border-focus);
+    }
+    body.light-theme h2 {
+      color: #1e293b;
+    }
+    body.light-theme strong {
+      color: #0f172a;
+    }
+    body.light-theme .highlight-box {
+      background: rgba(99, 102, 241, 0.08);
+      border-color: rgba(99, 102, 241, 0.25);
+      color: #3730a3;
+    }
+    body.light-theme code {
+      background: #f1f5f9;
+      color: #0f172a;
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+    body.light-theme .table-permissions th {
+      background: #f1f5f9;
+      color: #0f172a;
+    }
+  </style>
+</head>
+<body class="dark-theme">
+  <div class="privacy-card">
+    <div class="privacy-top-bar">
+      <span class="badge">Privacy First • 100% Client-Side • Zero Cloud Uploads</span>
+      <button id="btn-privacy-theme-toggle" class="btn-icon-theme" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
+        </svg>
+      </button>
+    </div>
+
+    <h1>Privacy Policy for PixelDOC</h1>
+    <p><strong>Effective Date:</strong> November 4, 2026 • <strong>Version:</strong> 1.0.0</p>
+
+    <div class="highlight-box">
+      <strong>Core Privacy Commitment:</strong> PixelDOC operates entirely offline as an on-device utility. All file compression, format conversions, and size adjustments are executed locally in your browser's private session memory using WebAssembly and client-side JavaScript. <strong>Your files, documents, and media are NEVER uploaded to any cloud server, third-party API, or remote storage.</strong>
+    </div>
+
+    <h2>1. Single Purpose &amp; Scope of Service</h2>
+    <p>PixelDOC is designed with a single, clear purpose: to optimize, compress, pad/resize, and convert digital files on your computer without compromising your privacy. Supported formats include:</p>
+    <ul>
+      <li><strong>Images:</strong> PNG, JPG/JPEG, WEBP, AVIF, SVG, BMP, ICO.</li>
+      <li><strong>Documents &amp; PDFs:</strong> PDF, Microsoft Word (DOCX, DOC), Markdown (MD), HTML, and Plain Text (TXT).</li>
+      <li><strong>Spreadsheets:</strong> Microsoft Excel (XLSX, XLS) and Comma-Separated Values (CSV).</li>
+    </ul>
+
+    <h2>2. Zero Personal Data Collection</h2>
+    <p>PixelDOC does not collect, log, track, harvest, sell, or transmit any user data:</p>
+    <ul>
+      <li><strong>No File Uploads:</strong> Files dragged or selected into PixelDOC are processed locally via HTML5 Canvas, WebAssembly, and local libraries (<code>pdf-lib</code>, <code>pdfjs-dist</code>, <code>jszip</code>). Processed data stays in your volatile memory and is instantly released when you clear the queue or close the tab.</li>
+      <li><strong>No Personal Identifiers:</strong> We do not ask for or collect names, email addresses, IP addresses, location data, or device hardware identifiers.</li>
+      <li><strong>No Web Activity Monitoring:</strong> PixelDOC does not inspect, modify, or track the web pages you visit.</li>
+    </ul>
+
+    <h2>3. Manifest Permissions Justification</h2>
+    <p>PixelDOC adheres strictly to the Principle of Least Privilege. The extension requests only two non-sensitive permissions:</p>
+    <table class="table-permissions">
+      <thead>
+        <tr>
+          <th>Permission</th>
+          <th>Exact Technical Purpose &amp; Justification</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>storage</code></td>
+          <td>Used exclusively to remember your local preferences (such as your chosen default target size, image format, EXIF stripping toggle, and light/dark theme) on your local device via <code>chrome.storage.local</code>. No personal data is stored.</td>
+        </tr>
+        <tr>
+          <td><code>contextMenus</code></td>
+          <td>Used exclusively to provide a convenient right-click shortcut on the extension toolbar icon ("Open PixelDOC Studio Pro") to open the fullscreen batch workstation in a new tab.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top: 8px;"><em>Note: PixelDOC deliberately requests ZERO host permissions, zero wildcard permissions (such as <code>&lt;all_urls&gt;</code>), and zero web request interceptors.</em></p>
+
+    <h2>4. Advertising &amp; Monetization Transparency</h2>
+    <p>To ensure total clarity during store review and end-user deployment:</p>
+    <ul>
+      <li><strong>Current Release (v1.0.0):</strong> All third-party advertising delivery and sponsor modules are completely <strong>INACTIVE and DISABLED</strong> (<code>MONETIZATION_CONFIG.enabled = false</code>). Zero network calls to ad servers are made.</li>
+      <li><strong>Future Monetization Principles:</strong> If optional contextual sponsorship via AdsOnBread is activated in a future update, it will strictly comply with store developer policies: zero behavioral profiling, zero third-party cookie tracking, zero injection into external websites, and prominent visual identification with a "SPONSORED" badge.</li>
+    </ul>
+
+    <h2>5. GDPR &amp; CCPA Compliance</h2>
+    <p>Because PixelDOC processes all content on-device and transmits zero personal information to any server, it complies inherently with the European Union General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA). No user data is ever sold, leased, or shared with data brokers.</p>
+
+    <h2>6. Developer Support &amp; Inquiries</h2>
+    <p>If you have any questions, feedback, or require technical assistance regarding PixelDOC, please reach out directly:</p>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:pixeldoc.extension@gmail.com" style="color: var(--accent);">pixeldoc.extension@gmail.com</a></li>
+      <li><strong>Workstation URL:</strong> <code>chrome-extension://[extension-id]/studio.html</code></li>
+    </ul>
+
+    <div class="footer-note">
+      <span>PixelDOC Studio Pro • Manifest V3 • Production Release</span>
+      <div class="footer-links">
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="studio.html">Open Studio</a>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="privacy.js"></script>
+</body>
+</html>
